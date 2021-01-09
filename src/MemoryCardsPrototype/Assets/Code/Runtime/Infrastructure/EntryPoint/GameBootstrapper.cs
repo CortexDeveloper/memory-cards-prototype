@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
+using Zenject;
 
 namespace Code.Runtime.Infrastructure.EntryPoint
 {
   public class GameBootstrapper : MonoBehaviour
   {
-    private void Awake() =>
-      CreateGameInstance();
-
-    private static void CreateGameInstance()
-    {
-      
-    }
+    [Inject]
+    private void BootGame(IGame game) =>
+      game.Initialize();
   }
 }

@@ -2,7 +2,7 @@
 
 namespace Code.Runtime.Infrastructure.StateMachine.States
 {
-  public class LobbyState : IState
+  public class SessionState : IState
   {
     [Inject]
     private void Construct(IGameStateMachine gameStateMachine) =>

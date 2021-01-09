@@ -2,14 +2,14 @@
 
 namespace Code.Runtime.Infrastructure.EntryPoint
 {
-  public class Game
+  public class Game : IGame
   {
     private readonly IGameStateMachine _stateMachine;
 
-    public Game(IGameStateMachine stateMachine)
-    {
+    public Game(IGameStateMachine stateMachine) =>
       _stateMachine = stateMachine;
-      stateMachine.ChangeState(GameStates.Bootstrap);
-    }
+
+    public void Initialize() =>
+      _stateMachine.ChangeState(GameStates.Bootstrap);
   }
 }
