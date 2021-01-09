@@ -1,0 +1,16 @@
+{
+    "name": "Cortex.",
+    "rootNamespace": "",
+    "references": [
+        "GUID:5770a8e0a675ced44a70fa9212034d05"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
