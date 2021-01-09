@@ -5,12 +5,8 @@ namespace Code.Runtime.Infrastructure.Factories.UI
 {
   public class LobbyMenuFactory : ILobbyMenuFactory
   {
-    public LobbyMenuFactory(DiContainer diContainer)
-    {
+    public LobbyMenuFactory(DiContainer diContainer) =>
       _diContainer = diContainer;
-      
-      Load();
-    }
 
     private readonly DiContainer _diContainer;
 
