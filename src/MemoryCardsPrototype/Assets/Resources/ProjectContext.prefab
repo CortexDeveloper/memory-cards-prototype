@@ -75,3 +75,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coroutineRunner: {fileID: 6234978928489958434, guid: a3eed601b209b7b43b5754e3be75c04c,
     type: 3}
+  _audioPlayer: {fileID: 5076267415738828561, guid: b6c5c9ba4f998cf4c8873f2a1d172584,
+    type: 3}

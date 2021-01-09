@@ -1,4 +1,5 @@
 ﻿using Code.Runtime.Infrastructure.EntryPoint;
+using Code.Runtime.Infrastructure.Services.AudioPlayer;
 using Code.Runtime.Infrastructure.Services.CoroutinesRunner;
 using Code.Runtime.Infrastructure.Services.ScenesLoader;
 using Code.Runtime.Infrastructure.StateMachine;
@@ -11,11 +12,13 @@ namespace Code.Runtime.Infrastructure.Installers
   public class BootstrapInstaller : MonoInstaller
   {
     [SerializeField] private GameObject _coroutineRunner;
+    [SerializeField] private GameObject _audioPlayer;
     
     public override void InstallBindings()
     {
       BindCoroutineRunner();
       BindScenesLoader();
+      BindAudioPlayer();
       BindGameStateMachine();
       BindGameInstance();
     }
@@ -42,6 +45,14 @@ namespace Code.Runtime.Infrastructure.Installers
       Container
         .Bind<ICoroutinesRunner>()
         .FromComponentInNewPrefab(_coroutineRunner)
+        .AsSingle();
+    }
+
+    private void BindAudioPlayer()
+    {
+      Container
+        .Bind<IAudioPlayer>()
+        .FromComponentInNewPrefab(_audioPlayer)
         .AsSingle();
     }
     
