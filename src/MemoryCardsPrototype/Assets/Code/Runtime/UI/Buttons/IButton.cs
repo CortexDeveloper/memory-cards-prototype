@@ -1,4 +1,4 @@
-﻿namespace Code.Runtime.UI
+﻿namespace Code.Runtime.UI.Buttons
 {
   public interface IButton
   {

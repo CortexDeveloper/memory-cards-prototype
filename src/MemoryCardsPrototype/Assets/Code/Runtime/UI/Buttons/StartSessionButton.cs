@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace Code.Runtime.UI
+namespace Code.Runtime.UI.Buttons
 {
   [RequireComponent(typeof(Button))]
   public class StartSessionButton : MonoBehaviour, IButton

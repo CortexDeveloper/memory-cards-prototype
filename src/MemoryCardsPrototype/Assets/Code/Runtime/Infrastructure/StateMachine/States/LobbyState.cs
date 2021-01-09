@@ -14,16 +14,11 @@ namespace Code.Runtime.Infrastructure.StateMachine.States
 
     public void Enter()
     {
-      ShowMenu();
+
     }
 
     public void Exit() =>
       LoadSessionScene();
-
-    private void ShowMenu()
-    {
-      //call factory create method
-    }
 
     private void LoadSessionScene() =>
       _sceneLoader.LoadScene(Scenes.SessionScene, () => { });
