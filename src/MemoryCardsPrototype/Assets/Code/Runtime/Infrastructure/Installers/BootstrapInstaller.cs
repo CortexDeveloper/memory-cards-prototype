@@ -1,14 +1,21 @@
 ﻿using Code.Runtime.Infrastructure.EntryPoint;
+using Code.Runtime.Infrastructure.Services.CoroutinesRunner;
+using Code.Runtime.Infrastructure.Services.ScenesLoader;
 using Code.Runtime.Infrastructure.StateMachine;
 using Code.Runtime.Infrastructure.StateMachine.States;
+using UnityEngine;
 using Zenject;
 
 namespace Code.Runtime.Infrastructure.Installers
 {
   public class BootstrapInstaller : MonoInstaller
   {
+    [SerializeField] private GameObject _coroutineRunner;
+    
     public override void InstallBindings()
     {
+      BindCoroutineRunner();
+      BindScenesLoader();
       BindGameStateMachine();
       BindGameInstance();
     }
@@ -22,6 +29,22 @@ namespace Code.Runtime.Infrastructure.Installers
         .NonLazy();
     }
 
+    private void BindScenesLoader()
+    {
+      Container
+        .Bind<ISceneLoader>()
+        .To<ScenesLoader>()
+        .AsSingle();
+    }
+    
+    private void BindCoroutineRunner()
+    {
+      Container
+        .Bind<ICoroutinesRunner>()
+        .FromComponentInNewPrefab(_coroutineRunner)
+        .AsSingle();
+    }
+    
     private void BindGameStateMachine()
     {
       Container
