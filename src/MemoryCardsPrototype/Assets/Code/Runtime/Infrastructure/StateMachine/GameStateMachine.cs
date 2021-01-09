@@ -13,7 +13,7 @@ namespace Code.Runtime.Infrastructure.StateMachine
       {
         [GameStates.Bootstrap] = bootstrapState,
         [GameStates.Lobby] = lobbyState,
-        [GameStates.Game] = sessionState
+        [GameStates.Session] = sessionState
       };
     }
 

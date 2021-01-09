@@ -4,6 +4,6 @@
   {
     Bootstrap,
     Lobby,
-    Game
+    Session
   }
 }

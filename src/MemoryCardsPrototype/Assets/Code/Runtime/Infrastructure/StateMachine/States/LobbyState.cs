@@ -1,23 +1,29 @@
-﻿using Zenject;
+﻿using Code.Runtime.Infrastructure.Services.ScenesLoader;
+using Zenject;
 
 namespace Code.Runtime.Infrastructure.StateMachine.States
 {
   public class LobbyState : IState
   {
     [Inject]
-    private void Construct(IGameStateMachine gameStateMachine) =>
+    private void Construct(IGameStateMachine gameStateMachine, ISceneLoader sceneLoader)
+    {
       StateMachine = gameStateMachine;
-    
+      _sceneLoader = sceneLoader;
+    }
+
+    private ISceneLoader _sceneLoader;
     public IStateMachine StateMachine { get; private set; }
 
     public void Enter()
     {
-      
+
     }
 
-    public void Exit()
-    {
-      
-    }
+    public void Exit() =>
+      LoadSessionScene();
+
+    private void LoadSessionScene() =>
+      _sceneLoader.LoadScene(Scenes.SessionScene, () => { });
   }
 }

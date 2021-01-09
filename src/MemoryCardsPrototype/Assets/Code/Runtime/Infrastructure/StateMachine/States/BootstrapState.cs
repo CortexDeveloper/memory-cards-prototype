@@ -1,4 +1,4 @@
-﻿using UnityEngine.SceneManagement;
+﻿using Code.Runtime.Infrastructure.Services.ScenesLoader;
 using Zenject;
 
 namespace Code.Runtime.Infrastructure.StateMachine.States
@@ -6,10 +6,13 @@ namespace Code.Runtime.Infrastructure.StateMachine.States
   public class BootstrapState : IState
   {
     [Inject]
-    private void Construct(IGameStateMachine gameStateMachine) =>
+    private void Construct(IGameStateMachine gameStateMachine, ISceneLoader sceneLoader)
+    {
       StateMachine = gameStateMachine;
-
-    private const string LobbyScene = "Lobby";
+      _sceneLoader = sceneLoader;
+    }
+    
+    private ISceneLoader _sceneLoader;
     
     public IStateMachine StateMachine { get; private set; }
     
@@ -24,10 +27,13 @@ namespace Code.Runtime.Infrastructure.StateMachine.States
       
     }
 
-    private static void LoadLobbyScene() => 
-      SceneManager.LoadScene(LobbyScene);
+    private void SetLobbyState() =>
+      StateMachine.ChangeState(GameStates.Lobby);
 
-    private static void LoadUserSettings()
+    private void LoadLobbyScene() =>
+      _sceneLoader.LoadScene(Scenes.LobbyScene, SetLobbyState);
+
+    private void LoadUserSettings()
     {
       //TODO implement      
     }
