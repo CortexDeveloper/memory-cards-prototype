@@ -11,9 +11,7 @@ namespace Code.Runtime.Infrastructure.StateMachine.States
       StateMachine = gameStateMachine;
       _sceneLoader = sceneLoader;
     }
-
-    private const string LobbyScene = "Lobby";
-
+    
     private ISceneLoader _sceneLoader;
     
     public IStateMachine StateMachine { get; private set; }
@@ -33,7 +31,7 @@ namespace Code.Runtime.Infrastructure.StateMachine.States
       StateMachine.ChangeState(GameStates.Lobby);
 
     private void LoadLobbyScene() =>
-      _sceneLoader.LoadScene(LobbyScene, SetLobbyState);
+      _sceneLoader.LoadScene(Scenes.LobbyScene, SetLobbyState);
 
     private void LoadUserSettings()
     {
