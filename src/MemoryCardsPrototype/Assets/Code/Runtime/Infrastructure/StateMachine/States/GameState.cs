@@ -2,6 +2,11 @@
 {
   public class GameState : IState
   {
+    public GameState(IStateMachine stateMachine) =>
+      StateMachine = stateMachine;
+
+    public IStateMachine StateMachine { get; }
+
     public void Enter()
     {
       

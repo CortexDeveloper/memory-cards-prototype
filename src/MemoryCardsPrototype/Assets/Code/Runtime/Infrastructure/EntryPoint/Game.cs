@@ -4,9 +4,9 @@ namespace Code.Runtime.Infrastructure.EntryPoint
 {
   public class Game
   {
-    private readonly GameStateMachine _stateMachine;
+    private readonly IGameStateMachine _stateMachine;
 
-    public Game(GameStateMachine stateMachine)
+    public Game(IGameStateMachine stateMachine)
     {
       _stateMachine = stateMachine;
       stateMachine.ChangeState(GameStates.Bootstrap);

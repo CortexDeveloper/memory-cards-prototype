@@ -3,11 +3,16 @@ using Code.Runtime.Infrastructure.StateMachine.States;
 
 namespace Code.Runtime.Infrastructure.StateMachine
 {
-  public class GameStateMachine : IStateMachine
+  public class GameStateMachine : IGameStateMachine
   {
-    public GameStateMachine(Dictionary<GameStates, IState> states)
+    public GameStateMachine()
     {
-      _states = states;
+      _states = new Dictionary<GameStates, IState>
+      {
+        [GameStates.Bootstrap] = new BootstrapState(this),
+        [GameStates.Lobby] = new LobbyState(this),
+        [GameStates.Game] = new GameState(this)
+      };
     }
 
     public IState CurrentState { get; private set; } 

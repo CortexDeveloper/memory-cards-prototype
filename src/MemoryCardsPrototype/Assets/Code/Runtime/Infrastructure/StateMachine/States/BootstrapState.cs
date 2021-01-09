@@ -4,13 +4,13 @@ namespace Code.Runtime.Infrastructure.StateMachine.States
 {
   public class BootstrapState : IState
   {
-    public BootstrapState(GameStateMachine stateMachine)
-    {
-        
-    }
-    
+    public BootstrapState(IStateMachine stateMachine) => 
+      StateMachine = stateMachine;
+
     private const string LobbyScene = "Lobby";
     
+    public IStateMachine StateMachine { get; }
+
     public void Enter()
     {
       LoadUserSettings();
@@ -22,11 +22,8 @@ namespace Code.Runtime.Infrastructure.StateMachine.States
       
     }
 
-    private static void LoadLobbyScene()
-    {
+    private static void LoadLobbyScene() => 
       SceneManager.LoadScene(LobbyScene);
-      
-    }
 
     private static void LoadUserSettings()
     {

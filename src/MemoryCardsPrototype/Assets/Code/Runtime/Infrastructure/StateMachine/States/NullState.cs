@@ -1,12 +1,12 @@
 ﻿namespace Code.Runtime.Infrastructure.StateMachine.States
 {
-  public class LobbyState : IState
+  public class NullState : IState
   {
-    public LobbyState(IStateMachine stateMachine) => 
+    public NullState(IStateMachine stateMachine) =>
       StateMachine = stateMachine;
 
     public IStateMachine StateMachine { get; }
-
+    
     public void Enter()
     {
       

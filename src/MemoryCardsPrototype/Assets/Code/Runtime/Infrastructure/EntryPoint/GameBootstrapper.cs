@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using Code.Runtime.Infrastructure.StateMachine;
-using Code.Runtime.Infrastructure.StateMachine.States;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Code.Runtime.Infrastructure.EntryPoint
 {
@@ -12,13 +9,7 @@ namespace Code.Runtime.Infrastructure.EntryPoint
 
     private static void CreateGameInstance()
     {
-      Game game = new Game(new GameStateMachine(
-        new Dictionary<GameStates, IState>
-        {
-          [GameStates.Bootstrap] = new BootstrapState(),
-          [GameStates.Lobby] = new LobbyState(),
-          [GameStates.Game] = new GameState()
-        }));
+      
     }
   }
 }
