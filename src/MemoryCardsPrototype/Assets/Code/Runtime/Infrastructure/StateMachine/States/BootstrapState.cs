@@ -1,4 +1,5 @@
-﻿using Code.Runtime.Infrastructure.Services.ScenesLoader;
+﻿using Code.Runtime.Infrastructure.Services.SaveLoadService;
+using Code.Runtime.Infrastructure.Services.ScenesLoader;
 using Zenject;
 
 namespace Code.Runtime.Infrastructure.StateMachine.States
@@ -6,13 +7,17 @@ namespace Code.Runtime.Infrastructure.StateMachine.States
   public class BootstrapState : IState
   {
     [Inject]
-    private void Construct(IGameStateMachine gameStateMachine, ISceneLoader sceneLoader)
+    private void Construct(IGameStateMachine gameStateMachine,
+      ISceneLoader sceneLoader,
+      ISaveLoadService<UserSettingsData> saveLoadService)
     {
       StateMachine = gameStateMachine;
       _sceneLoader = sceneLoader;
+      _saveLoadService = saveLoadService;
     }
     
     private ISceneLoader _sceneLoader;
+    private ISaveLoadService<UserSettingsData> _saveLoadService;
     
     public IStateMachine StateMachine { get; private set; }
     
@@ -33,9 +38,7 @@ namespace Code.Runtime.Infrastructure.StateMachine.States
     private void LoadLobbyScene() =>
       _sceneLoader.LoadScene(Scenes.LobbyScene, SetLobbyState);
 
-    private void LoadUserSettings()
-    {
-      //TODO implement      
-    }
+    private void LoadUserSettings() =>
+      _saveLoadService.Load();
   }
 }

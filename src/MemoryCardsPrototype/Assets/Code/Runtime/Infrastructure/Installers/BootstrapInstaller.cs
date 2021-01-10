@@ -1,6 +1,7 @@
 ﻿using Code.Runtime.Infrastructure.EntryPoint;
 using Code.Runtime.Infrastructure.Services.AudioPlayer;
 using Code.Runtime.Infrastructure.Services.CoroutinesRunner;
+using Code.Runtime.Infrastructure.Services.SaveLoadService;
 using Code.Runtime.Infrastructure.Services.ScenesLoader;
 using Code.Runtime.Infrastructure.StateMachine;
 using Code.Runtime.Infrastructure.StateMachine.States;
@@ -18,6 +19,7 @@ namespace Code.Runtime.Infrastructure.Installers
     {
       BindCoroutineRunner();
       BindScenesLoader();
+      BindSaveLoadService();
       BindAudioPlayer();
       BindGameStateMachine();
       BindGameInstance();
@@ -39,12 +41,20 @@ namespace Code.Runtime.Infrastructure.Installers
         .To<ScenesLoader>()
         .AsSingle();
     }
-    
+
     private void BindCoroutineRunner()
     {
       Container
         .Bind<ICoroutinesRunner>()
         .FromComponentInNewPrefab(_coroutineRunner)
+        .AsSingle();
+    }
+
+    private void BindSaveLoadService()
+    {
+      Container
+        .Bind<ISaveLoadService<UserSettingsData>>()
+        .To<UserSettingsStorage>()
         .AsSingle();
     }
 
