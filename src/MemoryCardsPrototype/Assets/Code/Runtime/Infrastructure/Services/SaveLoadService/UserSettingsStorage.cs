@@ -7,9 +7,18 @@ namespace Code.Runtime.Infrastructure.Services.SaveLoadService
   {
     private const string UserSettingDataKey = "save_UserSettingData";
     private const string DefaultUserSettingsData = "{\"SoundState\":true}";
-    
-    public UserSettingsData Load() =>  
-      JsonConvert.DeserializeObject<UserSettingsData>(PlayerPrefs.GetString(UserSettingDataKey, DefaultUserSettingsData));
+
+    public UserSettingsData LoadedData { get; private set; }
+
+    public UserSettingsData Load()
+    {
+      UserSettingsData userSettingsData = 
+        JsonConvert.DeserializeObject<UserSettingsData>(PlayerPrefs.GetString(UserSettingDataKey, DefaultUserSettingsData));
+
+      LoadedData = userSettingsData;
+      
+      return LoadedData;
+    }
 
     public void Save(UserSettingsData data)
     {
