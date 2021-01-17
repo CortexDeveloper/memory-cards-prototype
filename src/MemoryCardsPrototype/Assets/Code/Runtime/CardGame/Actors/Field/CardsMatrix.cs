@@ -10,17 +10,17 @@ namespace Code.Runtime.CardGame.Actors.Field
     public CardsMatrix(int horizontalSize, int verticalSize)
     {
       Matrix = new List<List<Card>>(verticalSize);
-      foreach (List<Card> row in Matrix)
+      for (int rowIndex = 0; rowIndex < verticalSize; rowIndex++)
       {
-        List<Card> rowCards = new List<Card>(horizontalSize);
-        for (int rowCardIndex = 0; rowCardIndex < horizontalSize; horizontalSize++)
-          rowCards.Add(new Card());
+        List<Card> columnCards = new List<Card>(horizontalSize);
+        for (int columnIndex = 0; columnIndex < horizontalSize; columnIndex++)
+          columnCards.Add(new Card());
 
-        Matrix.Add(rowCards);
+        Matrix.Add(columnCards);
       }
     }
 
-    public readonly List<List<Card>> Matrix;
+    public List<List<Card>> Matrix;
     
     public int UniqueCardsCount => 
       Matrix.Count * Matrix[0].Count / 2;
@@ -63,6 +63,6 @@ namespace Code.Runtime.CardGame.Actors.Field
     }
 
     private void ShuffleCards() =>
-      Matrix.Shuffle<Card>(new Random());
+      Matrix = Matrix.Shuffle();
   }
 }

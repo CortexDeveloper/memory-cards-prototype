@@ -6,24 +6,15 @@ namespace Code.Runtime.Infrastructure.Extensions.BaseTypes
 {
   public static class ListExtensions
   {
-    public static void Shuffle<T>(this List<List<T>> list, Random random)
+    public static List<List<T>> Shuffle<T>(this List<List<T>> lists)
     {
-      T[][] array = list.Select(a => a.ToArray()).ToArray();
-      
-      int lengthRow = array.GetLength(1);
-      for (int i = array.Length - 1; i > 0; i--)
-      {
-        int i0 = i / lengthRow;
-        int i1 = i % lengthRow;
+      for (var index = 0; index < lists.Count; index++)
+        lists[index] = lists[index].Shuffle();
 
-        int j = random.Next(i + 1);
-        int j0 = j / lengthRow;
-        int j1 = j % lengthRow;
-
-        T temp = array[i0][i1];
-        array[i0][i1] = array[j0][j1];
-        array[j0][j1] = temp;
-      }
+      return lists.OrderBy(a => Guid.NewGuid()).ToList();
     }
+    
+    public static List<T> Shuffle<T>(this List<T> list) =>
+      list.OrderBy(a => Guid.NewGuid()).ToList();
   }
 }
