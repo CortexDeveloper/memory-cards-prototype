@@ -10,10 +10,10 @@ namespace Code.Runtime.CardGame.Factories
 
     private readonly DiContainer _diContainer;
     
-    public void Create(Transform parent, Vector3 position)
+    public GameObject Create(Transform parent, Vector3 position)
     {
       GameObject card = Resources.Load<GameObject>(CardGamePaths.CardPrefab);
-      _diContainer.InstantiatePrefab(card, position, Quaternion.identity, parent);
+      return _diContainer.InstantiatePrefab(card, position, Quaternion.identity, parent);
     }
   }
 }

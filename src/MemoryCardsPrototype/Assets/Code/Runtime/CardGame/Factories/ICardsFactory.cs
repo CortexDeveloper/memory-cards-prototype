@@ -4,6 +4,6 @@ namespace Code.Runtime.CardGame.Factories
 {
   public interface ICardsFactory
   {
-    void Create(Transform parent, Vector3 position);
+    GameObject Create(Transform parent, Vector3 position);
   }
 }

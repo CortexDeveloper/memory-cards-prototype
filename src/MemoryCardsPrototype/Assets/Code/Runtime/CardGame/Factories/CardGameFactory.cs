@@ -1,5 +1,4 @@
-﻿using Code.Runtime.Infrastructure.StateMachine;
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
 
 namespace Code.Runtime.CardGame.Factories

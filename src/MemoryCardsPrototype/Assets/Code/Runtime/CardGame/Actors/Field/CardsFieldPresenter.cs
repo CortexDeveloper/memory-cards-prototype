@@ -1,4 +1,5 @@
-﻿using Code.Runtime.CardGame.Data;
+﻿using Code.Runtime.CardGame.Actors.Cards;
+using Code.Runtime.CardGame.Data;
 using Code.Runtime.CardGame.Factories;
 using UnityEngine;
 using Zenject;
@@ -20,22 +21,28 @@ namespace Code.Runtime.CardGame.Actors.Field
     private ICardsFactory _cardsFactory;
     private ICardGameConfiguration _configuration;
 
-    public void SpawnCards(CardsMatrix matrix)
+    public void SpawnCards(CardsMatrix cardsMatrix)
     {
       Vector3 currentCardPosition = Root.transform.localPosition;
-
-      for (int row = 0; row < matrix.Matrix.Count; row++)
+      for (int row = 0; row < cardsMatrix.Matrix.Count; row++)
       {
-        for (int columns = 0; columns < matrix.Matrix[0].Count; columns++)
+        for (int columns = 0; columns < cardsMatrix.Matrix[0].Count; columns++)
         {
-          _cardsFactory.Create(Root, currentCardPosition);
-          
+          CardPresenter cardPresenter = _cardsFactory.Create(Root, currentCardPosition).GetComponent<CardPresenter>();
+          SetupCardPresenter(cardsMatrix, cardPresenter, row, columns);
+
           currentCardPosition.x += _configuration.CellSize;
         }
         
         currentCardPosition.x = Root.localPosition.x;
         currentCardPosition.y += _configuration.CellSize;
       }
+    }
+
+    private static void SetupCardPresenter(CardsMatrix cardsMatrix, CardPresenter cardPresenter, int row, int columns)
+    {
+      cardPresenter.Card.Id = cardsMatrix.Matrix[row][columns].Id;
+      cardPresenter.Card.Value = cardsMatrix.Matrix[row][columns].Value;
     }
   }
 }
