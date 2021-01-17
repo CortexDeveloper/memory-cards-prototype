@@ -1,7 +1,7 @@
 using Code.Runtime.Infrastructure.Factories.UI;
 using Zenject;
 
-namespace Code.Runtime.Infrastructure.Installers
+namespace Code.Runtime.Infrastructure.Installers.Behaviours
 {
     public class LobbyInstaller : MonoInstaller
     {

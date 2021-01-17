@@ -8,7 +8,7 @@ using Code.Runtime.Infrastructure.StateMachine.States;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Runtime.Infrastructure.Installers
+namespace Code.Runtime.Infrastructure.Installers.Behaviours
 {
   public class BootstrapInstaller : MonoInstaller
   {

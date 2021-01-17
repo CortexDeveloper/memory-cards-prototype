@@ -16,11 +16,29 @@ namespace Code.Runtime.CardGame.Data
         ? _verticalCellsCount 
         : ++_verticalCellsCount;
 
+    [field: SerializeField] public float CellSize { get; private set; }
+
     [field: SerializeField] public float SessionTime { get; private set; }
 
 #if UNITY_EDITOR
-    private void OnValidate() =>
+    private void OnValidate()
+    {
       ValidateVerticalCellsCount();
+      ValidateCellSize();
+      ValidateSessionTime();
+    }
+
+    private void ValidateSessionTime()
+    {
+      if (SessionTime <= 0)
+        SessionTime = 60f;
+    }
+
+    private void ValidateCellSize()
+    {
+      if (CellSize <= 0)
+        CellSize = 1f;
+    }
 
     private void ValidateVerticalCellsCount()
     {
