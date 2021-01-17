@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _horizontalCellsCount: 4
   _verticalCellsCount: 6
+  <CellSize>k__BackingField: 25
   <SessionTime>k__BackingField: 120

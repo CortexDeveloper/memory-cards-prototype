@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Code.Runtime.CardGame.Actors.Cards;
 using Code.Runtime.Infrastructure.Extensions.BaseTypes;
 

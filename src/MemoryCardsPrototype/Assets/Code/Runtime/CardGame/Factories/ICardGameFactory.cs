@@ -1,4 +1,6 @@
-﻿namespace Code.Runtime.CardGame.Factories
+﻿using UnityEngine;
+
+namespace Code.Runtime.CardGame.Factories
 {
   public interface ICardGameFactory
   {

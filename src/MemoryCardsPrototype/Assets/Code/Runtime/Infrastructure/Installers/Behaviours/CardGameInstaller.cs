@@ -8,6 +8,7 @@ namespace Code.Runtime.Infrastructure.Installers.Behaviours
     public override void InstallBindings()
     {
       BindCardGameFactory();
+      BindCardsFactory();
     }
 
     private void BindCardGameFactory()
@@ -15,6 +16,15 @@ namespace Code.Runtime.Infrastructure.Installers.Behaviours
       Container
         .Bind<ICardGameFactory>()
         .To<CardGameFactory>()
+        .AsSingle()
+        .NonLazy();
+    }
+    
+    private void BindCardsFactory()
+    {
+      Container
+        .Bind<ICardsFactory>()
+        .To<CardsFactory>()
         .AsSingle()
         .NonLazy();
     }
