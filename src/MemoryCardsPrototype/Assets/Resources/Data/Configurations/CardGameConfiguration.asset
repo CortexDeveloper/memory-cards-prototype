@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CardGameConfiguration
   m_EditorClassIdentifier: 
   _horizontalCellsCount: 4
-  _verticalCellsCount: 4
+  _verticalCellsCount: 6
   <SessionTime>k__BackingField: 120
