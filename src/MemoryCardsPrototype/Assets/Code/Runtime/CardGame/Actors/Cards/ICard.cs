@@ -2,7 +2,8 @@
 {
   public interface ICard
   {
-    string Id { get; }
+    int Id { get; }
+    string Value { get; }
     bool IsMatched { get; }
   }
 }

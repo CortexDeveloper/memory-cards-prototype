@@ -12,14 +12,14 @@ namespace Code.Runtime.CardGame.Actors.Field
       _configuration = configuration;
 
       _sessionTime = _configuration.SessionTime;
+      
       _cardsMatrix = new CardsMatrix(_configuration.HorizontalCellsCount, _configuration.VerticalCellsCount);
+      _cardsMatrix.GenerateMatrix();
     }
 
     private ICardGameConfiguration _configuration;
     
     private CardsMatrix _cardsMatrix;
     private float _sessionTime;
-    
-    
   }
 }

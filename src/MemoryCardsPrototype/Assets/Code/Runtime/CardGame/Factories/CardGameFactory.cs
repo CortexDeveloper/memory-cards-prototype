@@ -15,8 +15,6 @@ namespace Code.Runtime.CardGame.Factories
     {
       GameObject cardField = Resources.Load<GameObject>(CardGamePaths.CardsFieldPrefab);
       _diContainer.InstantiatePrefab(cardField);
-      
-      
     }
   }
 }
