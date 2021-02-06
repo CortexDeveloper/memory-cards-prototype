@@ -4,7 +4,7 @@
   {
     TData LoadedData { get; }
 
-    TData Load(); //TODO todo
+    TData Load();
     void Save(TData data);
   }
 }
