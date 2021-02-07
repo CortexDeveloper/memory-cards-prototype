@@ -9,7 +9,8 @@ namespace Code.Runtime.CardGame.Actors.Field
   [RequireComponent(typeof(CardsField))]
   public class CardsFieldPresenter : MonoBehaviour
   {
-    [SerializeField] private Transform Root;
+    [SerializeField] private Transform cardsParent;
+    [SerializeField] private Transform cardsSpawnStartPoint;
     
     [Inject]
     private void Construct(ICardGameConfiguration configuration, ICardsFactory cardsFactory)
@@ -23,26 +24,27 @@ namespace Code.Runtime.CardGame.Actors.Field
 
     public void SpawnCards(CardsMatrix cardsMatrix)
     {
-      Vector3 currentCardPosition = Root.transform.localPosition;
+      Vector3 currentCardPosition = cardsSpawnStartPoint.transform.position;
       for (int row = 0; row < cardsMatrix.Matrix.Count; row++)
       {
-        for (int columns = 0; columns < cardsMatrix.Matrix[0].Count; columns++)
+        for (int column = 0; column < cardsMatrix.Matrix[0].Count; column++)
         {
-          CardPresenter cardPresenter = _cardsFactory.Create(Root, currentCardPosition).GetComponent<CardPresenter>();
-          SetupCardPresenter(cardsMatrix, cardPresenter, row, columns);
+          CardPresenter cardPresenter = _cardsFactory.Create(cardsParent, currentCardPosition).GetComponent<CardPresenter>();
+          SetupCardPresenter(cardsMatrix, cardPresenter, row, column);
 
           currentCardPosition.x += _configuration.CellSize;
         }
         
-        currentCardPosition.x = Root.localPosition.x;
+        currentCardPosition.x = cardsSpawnStartPoint.position.x;
         currentCardPosition.y += _configuration.CellSize;
       }
     }
 
-    private static void SetupCardPresenter(CardsMatrix cardsMatrix, CardPresenter cardPresenter, int row, int columns)
+    private static void SetupCardPresenter(CardsMatrix cardsMatrix, CardPresenter cardPresenter, int row, int column)
     {
-      cardPresenter.Card.Id = cardsMatrix.Matrix[row][columns].Id;
-      cardPresenter.Card.Value = cardsMatrix.Matrix[row][columns].Value;
+      cardPresenter.Card.Id = cardsMatrix.Matrix[row][column].Id;
+      cardPresenter.Card.Value = cardsMatrix.Matrix[row][column].Value;
+      cardPresenter.name = cardPresenter.name.Replace("(Clone)", $"[{row}][{column}]");
     }
   }
 }

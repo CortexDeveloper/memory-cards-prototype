@@ -4,6 +4,6 @@
   {
     public const string BootstrapScene = "Bootstrap";
     public const string LobbyScene = "Lobby";
-    public const string SessionScene = "Session";
+    public const string SessionScene = "CardGame";
   }
 }

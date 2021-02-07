@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aee9cbf51a6405c919c4e74b9d243f7, type: 3}
   m_Name: CardGameConfiguration
   m_EditorClassIdentifier: 
-  _horizontalCellsCount: 4
+  _horizontalCellsCount: 8
   _verticalCellsCount: 6
-  <CellSize>k__BackingField: 25
+  <CellSize>k__BackingField: 110
   <SessionTime>k__BackingField: 120

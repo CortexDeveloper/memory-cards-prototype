@@ -12,8 +12,9 @@ namespace Code.Runtime.CardGame.Factories
     
     public void Create()
     {
-      GameObject cardField = Resources.Load<GameObject>(CardGamePaths.CardsFieldPrefab);
-      _diContainer.InstantiatePrefab(cardField);
+      GameObject cardFieldPrefab = Resources.Load<GameObject>(CardGamePaths.CardsFieldPrefab);
+      GameObject cardGame = _diContainer.InstantiatePrefab(cardFieldPrefab);
+      cardGame.name = cardGame.name.Replace("(Clone)", string.Empty);
     }
   }
 }
