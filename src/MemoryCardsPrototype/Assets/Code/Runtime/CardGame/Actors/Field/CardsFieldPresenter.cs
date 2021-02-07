@@ -44,6 +44,7 @@ namespace Code.Runtime.CardGame.Actors.Field
     {
       cardPresenter.Card.Id = cardsMatrix.Matrix[row][column].Id;
       cardPresenter.Card.Value = cardsMatrix.Matrix[row][column].Value;
+      cardPresenter.ShowBackside("*");
       cardPresenter.name = cardPresenter.name.Replace("(Clone)", $"[{row}][{column}]");
     }
   }
