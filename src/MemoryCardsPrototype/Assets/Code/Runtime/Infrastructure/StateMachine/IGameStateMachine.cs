@@ -1,4 +1,4 @@
-﻿namespace Code.Runtime.Infrastructure.StateMachine
+﻿namespace Infrastructure.StateMachine
 {
   public interface IGameStateMachine : IStateMachine
   {

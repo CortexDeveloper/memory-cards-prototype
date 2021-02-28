@@ -1,4 +1,4 @@
-﻿namespace Code.Runtime.CardGame.Actors.Cards
+﻿namespace CardGame.Actors.Cards
 {
   public interface ICard
   {

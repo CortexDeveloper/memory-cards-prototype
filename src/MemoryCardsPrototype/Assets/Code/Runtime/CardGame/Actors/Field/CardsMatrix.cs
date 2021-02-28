@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Code.Runtime.CardGame.Actors.Cards;
-using Code.Runtime.Infrastructure.Extensions.BaseTypes;
+using CardGame.Actors.Cards;
+using Infrastructure.Extensions.BaseTypes;
 
-namespace Code.Runtime.CardGame.Actors.Field
+namespace CardGame.Actors.Field
 {
   public class CardsMatrix
   {

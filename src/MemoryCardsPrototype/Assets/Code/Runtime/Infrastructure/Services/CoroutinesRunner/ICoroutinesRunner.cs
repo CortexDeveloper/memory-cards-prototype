@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace Code.Runtime.Infrastructure.Services.CoroutinesRunner
+namespace Infrastructure.Services.CoroutinesRunner
 {
   public interface ICoroutinesRunner
   {

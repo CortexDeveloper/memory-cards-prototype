@@ -1,4 +1,4 @@
-﻿namespace Code.Runtime.Infrastructure.EntryPoint
+﻿namespace Infrastructure.EntryPoint
 {
   public interface IGame
   {

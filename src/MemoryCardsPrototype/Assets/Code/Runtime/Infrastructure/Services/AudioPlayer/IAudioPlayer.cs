@@ -1,4 +1,4 @@
-﻿namespace Code.Runtime.Infrastructure.Services.AudioPlayer
+﻿namespace Infrastructure.Services.AudioPlayer
 {
   public interface IAudioPlayer
   {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Code.Runtime.Infrastructure.Services.AudioPlayer
+namespace Infrastructure.Services.AudioPlayer
 {
   [RequireComponent(typeof(AudioSource))]
   public class AudioPlayer : MonoBehaviour, IAudioPlayer

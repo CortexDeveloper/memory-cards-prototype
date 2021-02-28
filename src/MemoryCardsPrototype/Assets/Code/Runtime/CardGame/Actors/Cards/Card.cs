@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Code.Runtime.CardGame.Actors.Cards
+namespace CardGame.Actors.Cards
 {
   [System.Serializable]
   public class Card : ICard

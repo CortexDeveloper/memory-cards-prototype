@@ -1,7 +1,7 @@
-﻿using Code.Runtime.CardGame.Factories;
+﻿using CardGame.Factories;
 using Zenject;
 
-namespace Code.Runtime.Infrastructure.Installers.Behaviours
+namespace Infrastructure.Installers.Behaviours
 {
   public class CardGameInstaller : MonoInstaller
   {

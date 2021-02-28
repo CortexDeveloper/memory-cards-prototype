@@ -1,11 +1,11 @@
-﻿using Code.Runtime.Infrastructure.Extensions.BaseTypes;
-using Code.Runtime.Infrastructure.Services.AudioPlayer;
-using Code.Runtime.Infrastructure.Services.SaveLoadService;
+﻿using Infrastructure.Extensions.BaseTypes;
+using Infrastructure.Services.AudioPlayer;
+using Infrastructure.Services.SaveLoadService;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace Code.Runtime.UI.Buttons
+namespace UI.Buttons
 {
   public class SoundSwitchToggle : MonoBehaviour, IToggle
   {

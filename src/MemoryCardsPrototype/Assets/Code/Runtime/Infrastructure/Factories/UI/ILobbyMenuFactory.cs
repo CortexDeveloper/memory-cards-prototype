@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Code.Runtime.Infrastructure.Factories.UI
+namespace Infrastructure.Factories.UI
 {
   public interface ILobbyMenuFactory
   {

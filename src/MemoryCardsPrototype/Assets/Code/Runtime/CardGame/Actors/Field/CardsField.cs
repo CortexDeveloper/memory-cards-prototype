@@ -1,9 +1,8 @@
-﻿using System;
-using Code.Runtime.CardGame.Data;
+﻿using CardGame.Data;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Runtime.CardGame.Actors.Field
+namespace CardGame.Actors.Field
 {
   public class CardsField : MonoBehaviour
   {

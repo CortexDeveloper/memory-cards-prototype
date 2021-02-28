@@ -1,4 +1,4 @@
-﻿namespace Code.Runtime.UI.Buttons
+﻿namespace UI.Buttons
 {
   public interface IToggle
   {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Zenject;
 
-namespace Code.Runtime.CardGame.Factories
+namespace CardGame.Factories
 {
   public class CardGameFactory : ICardGameFactory
   {

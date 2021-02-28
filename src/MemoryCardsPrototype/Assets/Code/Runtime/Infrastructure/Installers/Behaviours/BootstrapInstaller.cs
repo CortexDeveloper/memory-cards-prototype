@@ -1,14 +1,14 @@
-﻿using Code.Runtime.Infrastructure.EntryPoint;
-using Code.Runtime.Infrastructure.Services.AudioPlayer;
-using Code.Runtime.Infrastructure.Services.CoroutinesRunner;
-using Code.Runtime.Infrastructure.Services.SaveLoadService;
-using Code.Runtime.Infrastructure.Services.ScenesLoader;
-using Code.Runtime.Infrastructure.StateMachine;
-using Code.Runtime.Infrastructure.StateMachine.States;
+﻿using Infrastructure.EntryPoint;
+using Infrastructure.Services.AudioPlayer;
+using Infrastructure.Services.CoroutinesRunner;
+using Infrastructure.Services.SaveLoadService;
+using Infrastructure.Services.ScenesLoader;
+using Infrastructure.StateMachine;
+using Infrastructure.StateMachine.States;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Runtime.Infrastructure.Installers.Behaviours
+namespace Infrastructure.Installers.Behaviours
 {
   public class BootstrapInstaller : MonoInstaller
   {

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Code.Runtime.Infrastructure.StateMachine.States;
+using Infrastructure.StateMachine.States;
 using Zenject;
 
-namespace Code.Runtime.Infrastructure.StateMachine
+namespace Infrastructure.StateMachine
 {
   public class GameStateMachine : IGameStateMachine
   {

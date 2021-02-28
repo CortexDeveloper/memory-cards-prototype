@@ -1,4 +1,4 @@
-﻿namespace Code.Runtime.Infrastructure.Extensions.BaseTypes
+﻿namespace Infrastructure.Extensions.BaseTypes
 {
   public static class BoolExtensions
   {

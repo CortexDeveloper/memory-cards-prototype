@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Code.Runtime.Infrastructure.Services.SaveLoadService
+namespace Infrastructure.Services.SaveLoadService
 {
   [Serializable]
   public class UserSettingsData

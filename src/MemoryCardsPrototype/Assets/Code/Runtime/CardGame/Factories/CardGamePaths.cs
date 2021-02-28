@@ -1,4 +1,4 @@
-﻿namespace Code.Runtime.CardGame.Factories
+﻿namespace CardGame.Factories
 {
   public class CardGamePaths
   {

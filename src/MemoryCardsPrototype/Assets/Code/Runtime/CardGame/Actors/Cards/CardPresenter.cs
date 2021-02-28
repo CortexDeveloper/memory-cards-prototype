@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-namespace Code.Runtime.CardGame.Actors.Cards
+namespace CardGame.Actors.Cards
 {
   public class CardPresenter : MonoBehaviour
   {

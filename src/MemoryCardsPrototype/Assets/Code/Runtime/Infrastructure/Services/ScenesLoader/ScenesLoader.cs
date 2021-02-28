@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections;
-using Code.Runtime.Infrastructure.Services.CoroutinesRunner;
+using Infrastructure.Services.CoroutinesRunner;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Code.Runtime.Infrastructure.Services.ScenesLoader
+namespace Infrastructure.Services.ScenesLoader
 {
   public class ScenesLoader : ISceneLoader
   {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Zenject;
 
-namespace Code.Runtime.Infrastructure.EntryPoint
+namespace Infrastructure.EntryPoint
 {
   public class GameBootstrapper : MonoBehaviour
   {

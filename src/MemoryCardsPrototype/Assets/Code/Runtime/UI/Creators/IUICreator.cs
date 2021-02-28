@@ -1,4 +1,4 @@
-﻿namespace Code.Runtime.UI.Creators
+﻿namespace UI.Creators
 {
   public interface IUICreator<TUIType>
   {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Code.Runtime.Infrastructure.Services.ScenesLoader
+namespace Infrastructure.Services.ScenesLoader
 {
   public interface ISceneLoader
   {

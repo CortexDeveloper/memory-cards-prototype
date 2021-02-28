@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Code.Runtime.Infrastructure.Extensions.BaseTypes
+namespace Infrastructure.Extensions.BaseTypes
 {
   public static class ListExtensions
   {

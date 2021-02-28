@@ -1,4 +1,4 @@
-﻿namespace Code.Runtime.Infrastructure.Factories.UI
+﻿namespace Infrastructure.Factories.UI
 {
   public class UIPrefabsPaths
   {

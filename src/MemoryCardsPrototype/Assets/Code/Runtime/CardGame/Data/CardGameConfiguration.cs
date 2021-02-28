@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Code.Runtime.CardGame.Data
+namespace CardGame.Data
 {
   [CreateAssetMenu(fileName = nameof(CardGameConfiguration), menuName = "CardGame/Data/" + nameof(CardGameConfiguration), order = 0)]
   public class CardGameConfiguration : ScriptableObject, ICardGameConfiguration

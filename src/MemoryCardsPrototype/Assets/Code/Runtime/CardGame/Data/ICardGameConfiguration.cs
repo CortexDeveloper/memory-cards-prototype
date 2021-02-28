@@ -1,4 +1,4 @@
-﻿namespace Code.Runtime.CardGame.Data
+﻿namespace CardGame.Data
 {
   public interface ICardGameConfiguration
   {

@@ -1,6 +1,6 @@
-﻿using Code.Runtime.Infrastructure.StateMachine.States;
+﻿using Infrastructure.StateMachine.States;
 
-namespace Code.Runtime.Infrastructure.StateMachine
+namespace Infrastructure.StateMachine
 {
   public interface IStateMachine
   {

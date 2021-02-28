@@ -1,9 +1,9 @@
-using Code.Runtime.Infrastructure.StateMachine;
+using Infrastructure.StateMachine;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace Code.Runtime.UI.Buttons
+namespace UI.Buttons
 {
   [RequireComponent(typeof(Button))]
   public class StartSessionButton : MonoBehaviour, IButton

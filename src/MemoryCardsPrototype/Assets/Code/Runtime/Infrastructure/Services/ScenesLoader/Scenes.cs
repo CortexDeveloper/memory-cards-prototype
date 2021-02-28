@@ -1,4 +1,4 @@
-﻿namespace Code.Runtime.Infrastructure.Services.ScenesLoader
+﻿namespace Infrastructure.Services.ScenesLoader
 {
   public class Scenes
   {

@@ -1,6 +1,6 @@
-﻿using Code.Runtime.Infrastructure.StateMachine;
+﻿using Infrastructure.StateMachine;
 
-namespace Code.Runtime.Infrastructure.EntryPoint
+namespace Infrastructure.EntryPoint
 {
   public class Game : IGame
   {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Code.Runtime.CardGame.Factories
+namespace CardGame.Factories
 {
   public interface ICardsFactory
   {

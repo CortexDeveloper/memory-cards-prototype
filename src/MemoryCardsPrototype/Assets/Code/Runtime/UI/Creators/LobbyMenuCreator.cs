@@ -1,8 +1,8 @@
-﻿using Code.Runtime.Infrastructure.Factories.UI;
+﻿using Infrastructure.Factories.UI;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Runtime.UI.Creators
+namespace UI.Creators
 {
   public class LobbyMenuCreator : MonoBehaviour, IUICreator<ILobbyMenuFactory>
   {

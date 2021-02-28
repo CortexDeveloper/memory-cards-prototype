@@ -1,8 +1,8 @@
-﻿using Code.Runtime.Infrastructure.Services.SaveLoadService;
-using Code.Runtime.Infrastructure.Services.ScenesLoader;
+﻿using Infrastructure.Services.SaveLoadService;
+using Infrastructure.Services.ScenesLoader;
 using Zenject;
 
-namespace Code.Runtime.Infrastructure.StateMachine.States
+namespace Infrastructure.StateMachine.States
 {
   public class BootstrapState : IState
   {

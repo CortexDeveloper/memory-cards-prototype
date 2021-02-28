@@ -1,7 +1,7 @@
-﻿using Code.Runtime.Infrastructure.Services.ScenesLoader;
+﻿using Infrastructure.Services.ScenesLoader;
 using Zenject;
 
-namespace Code.Runtime.Infrastructure.StateMachine.States
+namespace Infrastructure.StateMachine.States
 {
   public class SessionState : IState
   {

@@ -1,10 +1,10 @@
-﻿using Code.Runtime.CardGame.Actors.Cards;
-using Code.Runtime.CardGame.Data;
-using Code.Runtime.CardGame.Factories;
+﻿using CardGame.Actors.Cards;
+using CardGame.Data;
+using CardGame.Factories;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Runtime.CardGame.Actors.Field
+namespace CardGame.Actors.Field
 {
   [RequireComponent(typeof(CardsField))]
   public class CardsFieldPresenter : MonoBehaviour

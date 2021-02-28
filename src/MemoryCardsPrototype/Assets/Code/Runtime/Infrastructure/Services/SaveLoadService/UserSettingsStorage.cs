@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using UnityEngine;
 
-namespace Code.Runtime.Infrastructure.Services.SaveLoadService
+namespace Infrastructure.Services.SaveLoadService
 {
   public class UserSettingsStorage : ISaveLoadService<UserSettingsData>
   {

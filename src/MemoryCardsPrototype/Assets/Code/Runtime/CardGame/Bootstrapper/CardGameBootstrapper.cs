@@ -1,8 +1,8 @@
-﻿using Code.Runtime.CardGame.Factories;
+﻿using CardGame.Factories;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Runtime.CardGame.Bootstrapper
+namespace CardGame.Bootstrapper
 {
   public class CardGameBootstrapper : MonoBehaviour
   {
