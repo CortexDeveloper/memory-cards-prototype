@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 using UnityEditor;
 using UnityEngine;
 
-namespace Code.Editor.SaveLoadTools
+namespace Editor.SaveLoadTools
 {
   public class UserSettingsDataSerializer : EditorWindow
   {
